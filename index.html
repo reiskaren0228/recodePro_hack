@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Monitoramento Climático</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de Navegação -->
+    <header>
+        <nav class="navbar">
+            <h1>Monitoramento Climático</h1>
+            <ul>
+                <li><a href="#home" onclick="mostrarAba('home')">Home</a></li>
+                <li><a href="#sobre" onclick="mostrarAba('sobre')">Quem Somos</a></li>
+                <li><a href="#risco" onclick="mostrarAba('risco')">Riscos</a></li>
+                <li><a href="#voluntariado" onclick="mostrarAba('voluntariado')">Voluntariado</a></li>
+                <li><a href="#quiz" onclick="mostrarAba('quiz')">Quiz</a></li>
+                <li><a href="#contato" onclick="mostrarAba('contato')">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <!-- Home -->
+        <section id="home" class="aba">
+            <h2>Bem-vindo ao Monitoramento Climático</h2>
+            <p>Monitoramento em tempo real e educação para prevenção de desastres climáticos.</p>
+            
+            <section id="monitoramento">
+                <h2>Monitoramento em Tempo Real</h2>
+                <div class="monitoramento-info">
+                    <p><strong>Nível do Rio:</strong> <span id="nivelRio">Carregando...</span></p>
+                    <p><strong>Previsão de Chuva:</strong> <span id="previsaoChuva">Carregando...</span></p>
+                </div>
+                <button onclick="atualizarDados()">Atualizar Dados</button>
+            </section>
+
+            <section id="informacao">
+                <h2>Centro de Informação e Comunicação</h2>
+                <p>Mantenha-se atualizado sobre as rotas seguras, abrigos e instruções durante emergências.</p>
+                <ul>
+                    <li>Abrigo mais próximo: <strong>Escola Municipal ABC</strong></li>
+                    <li>Rotas seguras: <strong>Via Principal</strong></li>
+                    <li>Ações recomendadas: <strong>Evacuar para áreas altas</strong></li>
+                </ul>
+            </section>
+
+            <section id="cadastro">
+                <h2>Cadastro para Alertas Personalizados</h2>
+                <form id="formCadastro">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" required>
+                    <label for="sobrenome">Sobrenome:</label>
+                    <input type="text" id="sobrenome" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" required>
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </section>
+        </section>
+
+        <!-- Quem Somos -->
+        <section id="sobre" class="aba" style="display:none;">
+            <h2>Quem Somos</h2>
+            <p>Somos uma equipe formada no hackathon da Recode IA para criar soluções para enchentes no Rio Grande do Sul.</p>
+        </section>
+
+        <!-- Riscos -->
+        <section id="risco" class="aba" style="display:none;">
+            <h2>Área de Riscos</h2>
+            <p>As enchentes podem causar diversos riscos, como:</p>
+            <ul>
+                <li>Danos à infraestrutura pública e privada</li>
+                <li>Perda de bens e imóveis</li>
+                <li>Riscos à saúde devido à contaminação da água</li>
+                <li>Deslocamento de comunidades e interrupção de serviços</li>
+            </ul>
+        </section>
+
+        <!-- Voluntariado -->
+        <section id="voluntariado" class="aba" style="display:none;">
+            <h2>Voluntariado</h2>
+            <p>Participe das nossas iniciativas e ajude as comunidades afetadas pelas enchentes. Veja abaixo ONGs e instituições que estão recrutando voluntários:</p>
+            <ul>
+                <li>ONG Solidariedade RS - Endereço: Rua ABC, 123</li>
+                <li>Instituto Ação Cidadã - Endereço: Av. Principal, 456</li>
+                <li>Projeto Mãos que Ajudam - Endereço: R. da Paz, 789</li>
+            </ul>
+            <button onclick="mostrarVoluntarios()">Ver Mais</button>
+        </section>
+
+        <!-- Quiz de Conscientização -->
+        <section id="quiz" class="aba" style="display:none;">
+            <h2>Quiz de Conscientização</h2>
+            <p>Teste seus conhecimentos sobre como agir durante uma enchente.</p>
+            <button onclick="abrirQuiz()">Iniciar Quiz</button>
+            <div id="perguntasQuiz" style="display:none;">
+                <p>1. O que você deve fazer ao ver sinais de enchente?</p>
+                <ul>
+                    <li>A) Ir para uma área baixa</li>
+                    <li>B) Buscar uma área elevada</li>
+                    <li>C) Ignorar o perigo</li>
+                </ul>
+                <p>2. Qual é o número de emergência em caso de enchente?</p>
+                <ul>
+                    <li>A) 180</li>
+                    <li>B) 190</li>
+                    <li>C) 193</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Fale Conosco -->
+        <section id="contato" class="aba" style="display:none;">
+            <h2>Fale Conosco</h2>
+            <p>Entre em contato conosco para mais informações sobre como agir em caso de enchentes.</p>
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

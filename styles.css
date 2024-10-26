@@ -1,0 +1,127 @@
+/* Paleta de Cores */
+:root {
+    --verde: #007b00;
+    --verde-escuro: #005500;
+    --vermelho: #d72638;
+    --vermelho-escuro: #a5202b;
+    --amarelo: #ffdd00;
+    --cinza: #333;
+    --branco: #f5f5f5;
+}
+
+/* Fundo com Gradiente */
+body {
+    background: linear-gradient(135deg, var(--verde), var(--amarelo), var(--vermelho));
+    color: var(--cinza);
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* Barra de Navegação */
+header {
+    background-color: var(--verde);
+    color: var(--branco);
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar h1 {
+    font-size: 1.8em;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar li {
+    padding: 5px;
+}
+
+.navbar a {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: var(--amarelo);
+}
+
+/* Seções */
+main {
+    padding: 20px;
+}
+
+section {
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    color: var(--vermelho);
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+/* Formulário de Contato */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+    color: var(--cinza);
+}
+
+input {
+    padding: 10px;
+    border: 1px solid var(--verde);
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button {
+    background-color: var(--vermelho);
+    color: var(--branco);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--vermelho-escuro);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar h1 {
+        font-size: 1.5em;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    section h2 {
+        font-size: 1.2em;
+    }
+}
