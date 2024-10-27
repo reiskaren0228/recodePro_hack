@@ -2,7 +2,7 @@
 
 ## 🌊 Hackathon Recode Pro AI 🌊
 
-<br>
+
 🚧 **Status:** Em Progresso ✔️
 
 ## 🗺️ Índice
@@ -80,7 +80,8 @@ cd hackathon-recode-pro-ai
 <br>
 
 ## 🚀 Como Usar
-<br>
+
+
 1 - Navegação:
 <br><br>
 - Acesse as diferentes seções da plataforma através do menu de navegação.
