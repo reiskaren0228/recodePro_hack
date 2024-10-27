@@ -24,7 +24,14 @@ body {
   min-height: 100vh;
   background: linear-gradient(to bottom right, #f0f9ff, var(--primary-light));
   position: relative;
-  padding-bottom: 80px; /* Height of the footer */
+  padding-bottom: 80px;
+  font-family: "Segoe UI", system-ui, sans-serif; 
+  color: var(--text-dark);
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, li, button, input, select {
+  font-family: "Segoe UI", system-ui, sans-serif;
 }
 
 .weather-info:hover {
@@ -155,12 +162,217 @@ section ul li {
   box-shadow: var(--shadow-sm);
 }
 
+/* Estilo da área de preparação e ajuda */
+.preparacao-ajuda-container {
+  background-color: var(--primary-light); /* Mantém o fundo claro */
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 40px;
+}
+
+.preparacao-titulo, .busca-ajuda {
+  color: var(--primary-color); /* Cor do texto de título */
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.preparacao-lista {
+  list-style: none;
+  padding: 0;
+}
+
+.preparacao-lista li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.preparacao-lista li i {
+  margin-right: 8px; /* Espaço entre o ícone e o texto */
+  color: var(--primary-color); /* Cor dos ícones */
+}
+
+.ajuda-contato {
+  padding: 10px;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.ajuda-contato strong {
+  color: #007bff; /* Cor azul para os números de contato */
+}
+
+/* Ajustes para os ícones */
+.preparacao-titulo i, .busca-ajuda i {
+  margin-right: 10px;
+}
+
+/* Estilo da área de preparação e ajuda sem borda */
+#instrucoes-preparacao {
+  background-color: transparent;
+  padding: 0 20px 20px 20px;
+  margin-bottom: 20px;
+}
+
+/* Estilo para os cards de alerta */
+#topo-alertas {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.busca-ajuda {
+  margin-top: 30px; 
+}
+
+.alerta-card {
+  background-color: var(--card-color);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: var(--shadow-md);
+  transition: box-shadow 0.2s, transform 0.2s;
+  flex: 1;
+  margin: 0 10px;
+  cursor: pointer;
+  border-left: 5px solid;
+}
+
+.alerta-alto {
+  border-color: #dc3545; /* Vermelho suave para alerta alto */
+}
+
+.alerta-medio {
+  border-color: #ffc107; /* Amarelo suave para alerta médio */
+}
+
+.alerta-baixo {
+  border-color: #28a745; /* Verde suave para alerta baixo */
+}
+
+.alerta-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+
+.alerta-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.risco-level {
+  font-weight: bold;
+}
+
+/* Estilo para a seção de regiões adicionais */
+#detalhes-regioes {
+  padding: 10px;
+  margin-top: 20px;
+  box-shadow: none;
+}
+
+#regioes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+#regioes-container .regiao-card {
+  background: var(--white);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  border-left: 5px solid;
+}
+
+.regiao-alto {
+  border-color: #dc3545; /* Vermelho para alerta alto */
+}
+
+.regiao-medio {
+  border-color: #ffc107; /* Amarelo para alerta médio */
+}
+
+.regiao-baixo {
+  border-color: #28a745; /* Verde para alerta baixo */
+}
+
+#regioes-container .regiao-card.regiao-alto {
+  border-color: #dc3545 !important; /* Vermelho para alerta alto */
+}
+
+#regioes-container .regiao-card.regiao-medio {
+  border-color: #ffc107 !important; /* Amarelo para alerta médio */
+}
+
+#regioes-container .regiao-card.regiao-baixo {
+  border-color: #28a745 !important; /* Verde para alerta baixo */
+}
+
 .form-container {
   background: var(--white);
   border-radius: 1rem;
   padding: 2rem;
   box-shadow: var(--shadow-md);
   margin-bottom: 2rem;
+}
+
+.relatos-container {
+  background: var(--white);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 2rem;
+}
+
+.relatos-container .relato-card {
+  padding: 15px;
+  background-color: var(--primary-light);
+  border-left: 5px solid var(--primary-color);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: var(--shadow-sm);
+}
+
+.map-container {
+  background: var(--white);
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 2rem;
+}
+
+#mapa-exemplo {
+  height: 400px;
+  width: 100%; 
+}
+
+#relato-form .form-group {
+  margin-bottom: 15px;
+}
+
+#relato-form label {
+  font-weight: bold;
+}
+
+#relato-form input, #relato-form select, #relato-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+}
+
+#relato-form button {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .form-grid {
@@ -225,6 +437,12 @@ section ul li {
 
 .fale-conosco-form p {
   margin-bottom: 2rem;
+}
+
+.fale-conosco-form select {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
 .fale-conosco-form {
@@ -465,7 +683,6 @@ section ul li {
 .item {
   cursor: pointer;
   color: var(--primary-color);
-  text-decoration: underline;
 }
 
 .item:hover {
@@ -480,10 +697,25 @@ section ul li {
   box-shadow: var(--shadow-sm);
 }
 
+/* Estilo para o botão de chamada para ação */
+.btn-cta {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.btn-cta:hover {
+  background-color: var(--text-dark);
+}
+
 footer {
   background: var(--nav-bg);
   backdrop-filter: blur(8px);
-  padding: 0; /* Removido o padding padrão */
+  padding: 0; 
   text-align: center;
   border-top: 1px solid var(--primary-light);
   position: fixed;
@@ -519,7 +751,7 @@ footer {
   color: var(--primary-color);
   text-decoration: none;
   transition: color 0.2s;
-  padding: 0.25rem 0.5rem; /* Padding nos links para área de clique maior */
+  padding: 0.25rem 0.5rem; 
 }
 
 .footer-links a:hover {

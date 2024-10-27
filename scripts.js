@@ -276,3 +276,40 @@ function loadFooter() {
 
 // Chame a função para carregar o footer
 document.addEventListener("DOMContentLoaded", loadFooter);
+
+// Função para simular o envio de SMS
+function enviarSMS(alertaId) {
+  console.log(`Enviando SMS para o alerta de ID: ${alertaId}`);
+  alert(`SMS de alerta enviado para os usuários da região com o alerta ${alertaId}.`);
+}
+
+// Função para exibir os alertas de risco
+function mostrarAlertas() {
+  const alertas = document.getElementById("alertas-risco");
+  alertas.classList.remove("hidden"); // Torna a seção visível
+  console.log("Exibindo alertas de risco.");
+}
+
+// Exemplo de como os alertas seriam inseridos dinamicamente (em uma aplicação real, isso viria de uma API)
+document.addEventListener("DOMContentLoaded", function() {
+  mostrarAlertas();
+});
+
+document.getElementById('relato-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Impedir que o formulário seja enviado da maneira tradicional
+  
+  // Capturar os dados do formulário
+  const localizacao = document.getElementById('localizacao').value;
+  const tipoIncidente = document.getElementById('tipo-incidente').value;
+  const descricao = document.getElementById('descricao').value;
+
+  // Adicionar um marcador no mapa (aqui simulamos com coordenadas fixas para o exemplo)
+  L.marker([-15.7801, -47.9292]).addTo(map)
+    .bindPopup(`<strong>${tipoIncidente}</strong><br>${descricao}<br><em>${localizacao}</em>`);
+
+  // Mostrar uma mensagem de sucesso
+  document.getElementById('mensagem-sucesso').style.display = 'block';
+
+  // Limpar o formulário
+  document.getElementById('relato-form').reset();
+});

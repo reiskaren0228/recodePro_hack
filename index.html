@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tempo Amigo</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.1/feather.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -22,9 +25,113 @@
           </p>
         </section>
 
+        <section id="alertas-completos">          
+          <div id="topo-alertas" class="alertas-grid">
+            <div class="alerta-card alerta-alto" style="--card-color: #f8d7da;" onclick="toggleRegioes('alto')">
+              <div class="alerta-header">
+                <h3>Alerta Alto</h3>
+                <span class="risco-level">Inundação - Sobradinho</span>
+              </div>
+              <p>Risco elevado de inundação em Sobradinho. Várias áreas alagadas.</p>
+            </div>
+        
+            <div class="alerta-card alerta-medio" style="--card-color: #fff3cd;" onclick="toggleRegioes('medio')">
+              <div class="alerta-header">
+                <h3>Alerta Médio</h3>
+                <span class="risco-level">Chuvas Fortes - Santa Maria</span>
+              </div>
+              <p>Possibilidade de chuvas intensas nas próximas 48 horas.</p>
+            </div>
+        
+            <div class="alerta-card alerta-baixo" style="--card-color: #d4edda;" onclick="toggleRegioes('baixo')">
+              <div class="alerta-header">
+                <h3>Alerta Baixo</h3>
+                <span class="risco-level">Risco Mínimo - Porto Alegre</span>
+              </div>
+              <p>Condições climáticas favoráveis, com baixa chance de desastres.</p>
+            </div>
+          </div>
+
+          <!-- Seção para exibir outras regiões atingidas -->
+          <div id="detalhes-regioes" class="hidden">
+            <h2>Outras Regiões Atingidas</h2>
+            <div id="regioes-container" class="regioes-grid"></div>
+          </div>
+
+          <div id="instrucoes-preparacao" class="preparacao-ajuda-container">
+            <h2 class="preparacao-titulo"><i class="fas fa-exclamation-triangle"></i> Como se Preparar</h2>
+            <ul class="preparacao-lista">
+              <li><i class="fas fa-water"></i> Evite áreas baixas e rios durante períodos de fortes chuvas.</li>
+              <li><i class="fas fa-box"></i> Monte um kit de emergência com alimentos, água e remédios.</li>
+              <li><i class="fas fa-map-signs"></i> Tenha um plano de evacuação e saiba para onde ir em caso de emergência.</li>
+            </ul>
+          
+            <h2 class="busca-ajuda"><i class="fas fa-phone-alt"></i> Onde Buscar Ajuda</h2>
+            <p class="ajuda-contato">
+              Em caso de emergência, entre em contato com a Defesa Civil do Rio Grande do Sul: 
+              <strong>199</strong> ou Corpo de Bombeiros: <strong>193</strong>. 
+              Caso necessário, entre em contato via ligação ou Whatsapp com as equipes de resgate 
+              <strong>(51) 9 9999-9999</strong>.
+            </p>
+          </div>          
+          
+        </section>        
+        
+        <section id="colaborar-alerta" class="form-container">
+          <h2>Colabore com os Alertas de Riscos</h2>
+          <p>Ajude-nos a monitorar e prevenir desastres naturais relatando situações de risco na sua área.</p>
+        
+          <form id="relato-form">
+            <div class="form-group">
+              <label for="localizacao">Localização:</label>
+              <input type="text" id="localizacao" name="localizacao" placeholder="Digite a localização" required>
+            </div>
+        
+            <div class="form-group">
+              <label for="tipo-incidente">Tipo de Incidente:</label>
+              <select id="tipo-incidente" name="tipo-incidente" required>
+                <option value="">Selecione</option>
+                <option value="inundacao">Inundação</option>
+                <option value="deslizamento">Deslizamento</option>
+                <option value="tempestade">Tempestade</option>
+              </select>
+            </div>
+        
+            <div class="form-group">
+              <label for="descricao">Descrição:</label>
+              <textarea id="descricao" name="descricao" rows="4" placeholder="Descreva a situação" required></textarea>
+            </div>
+        
+            <button type="submit">Enviar Relato</button>
+          </form>
+        
+          <p id="mensagem-sucesso" style="color: green; display: none;">Relato enviado com sucesso!</p>
+        </section>        
+
+        <section id="mapa-alertas" class="map-container">
+          <h2>Mapa de Alertas</h2>
+          <div id="mapa-exemplo"></div>
+        </section>
+        
+        <section id="relatos-recentes" class="relatos-container">
+          <h2>Relatos Recentes</h2>
+        
+          <div class="relato-card">
+            <h3>Inundação - Sobradinho</h3>
+            <p><strong>Data:</strong> 20 de Setembro, 2023</p>
+            <p><strong>Descrição:</strong> Várias áreas urbanas foram inundadas devido às fortes chuvas.</p>
+          </div>
+        
+          <div class="relato-card">
+            <h3>Inundação - Santa Maria</h3>
+            <p><strong>Data:</strong> 19 de Setembro, 2023</p>
+            <p><strong>Descrição:</strong> Enchentes deixaram dezenas de pessoas desabrigadas.</p>
+          </div>
+        </section>        
+
         <section class="form-container">
           <h2 style="margin-bottom: 1.5rem; color: var(--text-dark)">
-            Informe seus Dados
+            Informe seus dados para receber Alertas!
           </h2>
           <form id="weather-form" class="form-grid">
             <div class="form-group">
@@ -73,6 +180,9 @@
 
     <!-- Rodapé -->
     <script src="scripts.js"></script>
+    <script src="alertCard.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="mapAlerts.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         feather.replace();
