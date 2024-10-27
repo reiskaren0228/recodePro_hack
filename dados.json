@@ -1,0 +1,1237 @@
+{
+    "cidades": [
+        {
+            "nome": "São Paulo",
+            "estado": "São Paulo",
+            "dados": {
+                "nivelRio": 2.8,
+                "previsaoChuva": "Parcialmente nublado",
+                "quantidadeAgua": 5,
+                "nivelRisco": "Baixo",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Rio de Janeiro",
+            "estado": "Rio de Janeiro",
+            "dados": {
+                "nivelRio": 4.0,
+                "previsaoChuva": "Temporal previsto",
+                "quantidadeAgua": 15,
+                "nivelRisco": "Alto",
+                "clima": "tempestade"
+            }
+        },
+        {
+            "nome": "Curitiba",
+            "estado": "Paraná",
+            "dados": {
+                "nivelRio": 2.1,
+                "previsaoChuva": "Céu limpo",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Belo Horizonte",
+            "estado": "Minas Gerais",
+            "dados": {
+                "nivelRio": 1.9,
+                "previsaoChuva": "Sem previsão",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Recife",
+            "estado": "Pernambuco",
+            "dados": {
+                "nivelRio": 2.5,
+                "previsaoChuva": "Chuva leve esperada",
+                "quantidadeAgua": 6,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+    
+        {
+            "nome": "Fortaleza",
+            "estado": "Ceará",
+            "dados": {
+                "nivelRio": 2.0,
+                "previsaoChuva": "Céu limpo",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Maceió",
+            "estado": "Alagoas",
+            "dados": {
+                "nivelRio": 2.3,
+                "previsaoChuva": "Chuva leve esperada",
+                "quantidadeAgua": 4,
+                "nivelRisco": "Moderado",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Teresina",
+            "estado": "Piauí",
+            "dados": {
+                "nivelRio": 1.7,
+                "previsaoChuva": "Céu limpo",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Goiânia",
+            "estado": "Goiás",
+            "dados": {
+                "nivelRio": 2.9,
+                "previsaoChuva": "Chuva moderada",
+                "quantidadeAgua": 10,
+                "nivelRisco": "Moderado",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Campo Grande",
+            "estado": "Mato Grosso do Sul",
+            "dados": {
+                "nivelRio": 2.2,
+                "previsaoChuva": "Chuva leve esperada",
+                "quantidadeAgua": 5,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Manaus",
+            "estado": "Amazonas",
+            "dados": {
+                "nivelRio": 4.5,
+                "previsaoChuva": "Chuva intensa",
+                "quantidadeAgua": 30,
+                "nivelRisco": "Alto",
+                "clima": "tempestade"
+            }
+        },
+        {
+            "nome": "Belém",
+            "estado": "Pará",
+            "dados": {
+                "nivelRio": 3.9,
+                "previsaoChuva": "Chuva moderada",
+                "quantidadeAgua": 20,
+                "nivelRisco": "Moderado",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Porto Velho",
+            "estado": "Rondônia",
+            "dados": {
+                "nivelRio": 5.1,
+                "previsaoChuva": "Chuva forte",
+                "quantidadeAgua": 25,
+                "nivelRisco": "Alto",
+                "clima": "tempestade"
+            }
+        },
+        {
+            "nome": "Rio Branco",
+            "estado": "Acre",
+            "dados": {
+                "nivelRio": 3.0,
+                "previsaoChuva": "Chuva leve",
+                "quantidadeAgua": 10,
+                "nivelRisco": "Moderado",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "São Luís",
+            "estado": "Maranhão",
+            "dados": {
+                "nivelRio": 2.8,
+                "previsaoChuva": "Chuva leve",
+                "quantidadeAgua": 5,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "João Pessoa",
+            "estado": "Paraíba",
+            "dados": {
+                "nivelRio": 1.8,
+                "previsaoChuva": "Céu limpo",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Aracaju",
+            "estado": "Sergipe",
+            "dados": {
+                "nivelRio": 2.2,
+                "previsaoChuva": "Sem previsão",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Cuiabá",
+            "estado": "Mato Grosso",
+            "dados": {
+                "nivelRio": 1.5,
+                "previsaoChuva": "Sem previsão",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Macapá",
+            "estado": "Amapá",
+            "dados": {
+                "nivelRio": 2.0,
+                "previsaoChuva": "Chuva leve",
+                "quantidadeAgua": 5,
+                "nivelRisco": "Moderado",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Teresina",
+            "estado": "Piauí",
+            "dados": {
+                "nivelRio": 1.7,
+                "previsaoChuva": "Céu limpo",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Campo Grande",
+            "estado": "Mato Grosso do Sul",
+            "dados": {
+                "nivelRio": 2.4,
+                "previsaoChuva": "Chuva leve",
+                "quantidadeAgua": 6,
+                "nivelRisco": "Moderado",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Vitória",
+            "estado": "Espírito Santo",
+            "dados": {
+                "nivelRio": 1.9,
+                "previsaoChuva": "Sem previsão",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Rio de Janeiro",
+            "estado": "Rio de Janeiro",
+            "dados": {
+                "nivelRio": 4.0,
+                "previsaoChuva": "Temporal previsto",
+                "quantidadeAgua": 15,
+                "nivelRisco": "Alto",
+                "clima": "tempestade"
+            }
+        },
+        {
+            "nome": "Salvador",
+            "estado": "Bahia",
+            "dados": {
+                "nivelRio": 3.8,
+                "previsaoChuva": "Chuva intensa prevista",
+                "quantidadeAgua": 20,
+                "nivelRisco": "Alto",
+                "clima": "tempestade"
+            }
+        },
+        {
+            "nome": "Campinas",
+            "estado": "São Paulo",
+            "dados": {
+                "nivelRio": 2.8,
+                "previsaoChuva": "Parcialmente nublado",
+                "quantidadeAgua": 5,
+                "nivelRisco": "Baixo",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Guarulhos",
+            "estado": "São Paulo",
+            "dados": {
+                "nivelRio": 1.8,
+                "previsaoChuva": "Parcialmente nublado",
+                "quantidadeAgua": 18,
+                "nivelRisco": "Baixo",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Goiânia",
+            "estado": "Goiás",
+            "dados": {
+                "nivelRio": 2.9,
+                "previsaoChuva": "Chuva moderada",
+                "quantidadeAgua": 10,
+                "nivelRisco": "Moderado",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Natal",
+            "estado": "Rio Grande do Norte",
+            "dados": {
+                "nivelRio": 1.5,
+                "previsaoChuva": "Sem previsão",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Porto Alegre",
+            "estado": "Rio Grande do Sul",
+            "dados": {
+                "nivelRio": 2.5,
+                "previsaoChuva": "Céu limpo",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Florianópolis",
+            "estado": "Santa Catarina",
+            "dados": {
+                "nivelRio": 1.8,
+                "previsaoChuva": "Chuva moderada",
+                "quantidadeAgua": 10,
+                "nivelRisco": "Moderado",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Joinville",
+            "estado": "Santa Catarina",
+            "dados": {
+                "nivelRio": 2.3,
+                "previsaoChuva": "Chuva intensa",
+                "quantidadeAgua": 20,
+                "nivelRisco": "Alto",
+                "clima": "tempestade"
+            }
+        },
+        {
+            "nome": "Caxias do Sul",
+            "estado": "Rio Grande do Sul",
+            "dados": {
+                "nivelRio": 2.2,
+                "previsaoChuva": "Céu limpo",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Londrina",
+            "estado": "Paraná",
+            "dados": {
+                "nivelRio": 2.6,
+                "previsaoChuva": "Chuva leve",
+                "quantidadeAgua": 5,
+                "nivelRisco": "Moderado",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Balneário Camboriú",
+            "estado": "Santa Catarina",
+            "dados": {
+                "nivelRio": 3.1,
+                "previsaoChuva": "Chuva moderada",
+                "quantidadeAgua": 8,
+                "nivelRisco": "Moderado",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Pelotas",
+            "estado": "Rio Grande do Sul",
+            "dados": {
+                "nivelRio": 2.9,
+                "previsaoChuva": "Céu limpo",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Maringá",
+            "estado": "Paraná",
+            "dados": {
+                "nivelRio": 1.5,
+                "previsaoChuva": "Sem previsão",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Chapecó",
+            "estado": "Santa Catarina",
+            "dados": {
+                "nivelRio": 3.2,
+                "previsaoChuva": "Chuva intensa",
+                "quantidadeAgua": 25,
+                "nivelRisco": "Alto",
+                "clima": "tempestade"
+            }
+        },
+        {
+            "nome": "Gravataí",
+            "estado": "Rio Grande do Sul",
+            "dados": {
+                "nivelRio": 1.9,
+                "previsaoChuva": "Céu limpo",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "São José",
+            "estado": "Santa Catarina",
+            "dados": {
+                "nivelRio": 2.4,
+                "previsaoChuva": "Chuva leve",
+                "quantidadeAgua": 5,
+                "nivelRisco": "Moderado",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Porto União",
+            "estado": "Santa Catarina",
+            "dados": {
+                "nivelRio": 3.4,
+                "previsaoChuva": "Chuva moderada",
+                "quantidadeAgua": 12,
+                "nivelRisco": "Moderado",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Foz do Iguaçu",
+            "estado": "Paraná",
+            "dados": {
+                "nivelRio": 4.0,
+                "previsaoChuva": "Chuva forte",
+                "quantidadeAgua": 15,
+                "nivelRisco": "Alto",
+                "clima": "tempestade"
+            }
+        },
+        {
+            "nome": "Ijuí",
+            "estado": "Rio Grande do Sul",
+            "dados": {
+                "nivelRio": 1.6,
+                "previsaoChuva": "Céu limpo",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Ponta Grossa",
+            "estado": "Paraná",
+            "dados": {
+                "nivelRio": 2.1,
+                "previsaoChuva": "Chuva leve",
+                "quantidadeAgua": 3,
+                "nivelRisco": "Moderado",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Santa Maria",
+            "estado": "Rio Grande do Sul",
+            "dados": {
+                "nivelRio": 2.0,
+                "previsaoChuva": "Sem previsão",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Canoas",
+            "estado": "Rio Grande do Sul",
+            "dados": {
+                "nivelRio": 2.7,
+                "previsaoChuva": "Céu limpo",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Rio do Sul",
+            "estado": "Santa Catarina",
+            "dados": {
+                "nivelRio": 3.3,
+                "previsaoChuva": "Chuva intensa",
+                "quantidadeAgua": 18,
+                "nivelRisco": "Alto",
+                "clima": "tempestade"
+            }
+        },
+        {
+            "nome": "Tubarão",
+            "estado": "Santa Catarina",
+            "dados": {
+                "nivelRio": 1.9,
+                "previsaoChuva": "Céu limpo",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Cerro Largo",
+            "estado": "Rio Grande do Sul",
+            "dados": {
+                "nivelRio": 1.7,
+                "previsaoChuva": "Chuva leve",
+                "quantidadeAgua": 4,
+                "nivelRisco": "Baixo",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Ponte Serrada",
+            "estado": "Santa Catarina",
+            "dados": {
+                "nivelRio": 2.2,
+                "previsaoChuva": "Chuva moderada",
+                "quantidadeAgua": 6,
+                "nivelRisco": "Moderado",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "São Lourenço do Sul",
+            "estado": "Rio Grande do Sul",
+            "dados": {
+                "nivelRio": 2.4,
+                "previsaoChuva": "Sem previsão",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Alfredo Wagner",
+            "estado": "Santa Catarina",
+            "dados": {
+                "nivelRio": 1.6,
+                "previsaoChuva": "Céu limpo",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Canela",
+            "estado": "Rio Grande do Sul",
+            "dados": {
+                "nivelRio": 2.5,
+                "previsaoChuva": "Céu limpo",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Itaiópolis",
+            "estado": "Santa Catarina",
+            "dados": {
+                "nivelRio": 3.1,
+                "previsaoChuva": "Chuva moderada",
+                "quantidadeAgua": 8,
+                "nivelRisco": "Moderado",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Serra",
+            "estado": "Espírito Santo",
+            "dados": {
+                "nivelRio": 1.4,
+                "previsaoChuva": "Sem previsão",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Mafra",
+            "estado": "Santa Catarina",
+            "dados": {
+                "nivelRio": 2.0,
+                "previsaoChuva": "Chuva leve",
+                "quantidadeAgua": 5,
+                "nivelRisco": "Moderado",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Santa Cruz do Sul",
+            "estado": "Rio Grande do Sul",
+            "dados": {
+                "nivelRio": 2.1,
+                "previsaoChuva": "Chuva moderada",
+                "quantidadeAgua": 10,
+                "nivelRisco": "Moderado",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Tijucas",
+            "estado": "Santa Catarina",
+            "dados": {
+                "nivelRio": 1.8,
+                "previsaoChuva": "Céu limpo",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Três Coroas",
+            "estado": "Rio Grande do Sul",
+            "dados": {
+                "nivelRio": 1.7,
+                "previsaoChuva": "Chuva leve",
+                "quantidadeAgua": 3,
+                "nivelRisco": "Baixo",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Nova Petrópolis",
+            "estado": "Rio Grande do Sul",
+            "dados": {
+                "nivelRio": 2.8,
+                "previsaoChuva": "Chuva intensa",
+                "quantidadeAgua": 12,
+                "nivelRisco": "Alto",
+                "clima": "tempestade"
+            }
+        },
+        {
+            "nome": "Irati",
+            "estado": "Paraná",
+            "dados": {
+                "nivelRio": 1.5,
+                "previsaoChuva": "Sem previsão",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Lajeado",
+            "estado": "Rio Grande do Sul",
+            "dados": {
+                "nivelRio": 2.6,
+                "previsaoChuva": "Chuva leve",
+                "quantidadeAgua": 5,
+                "nivelRisco": "Moderado",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Prudentópolis",
+            "estado": "Paraná",
+            "dados": {
+                "nivelRio": 1.9,
+                "previsaoChuva": "Chuva moderada",
+                "quantidadeAgua": 6,
+                "nivelRisco": "Moderado",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "São Bento do Sul",
+            "estado": "Santa Catarina",
+            "dados": {
+                "nivelRio": 1.6,
+                "previsaoChuva": "Céu limpo",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Entre Rios",
+            "estado": "Rio Grande do Sul",
+            "dados": {
+                "nivelRio": 2.2,
+                "previsaoChuva": "Céu limpo",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Bandeirantes",
+            "estado": "Paraná",
+            "dados": {
+                "nivelRio": 1.4,
+                "previsaoChuva": "Sem previsão",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Araripina",
+            "estado": "Pernambuco",
+            "dados": {
+                "nivelRio": 1.2,
+                "previsaoChuva": "Céu limpo",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Igarassu",
+            "estado": "Pernambuco",
+            "dados": {
+                "nivelRio": 2.5,
+                "previsaoChuva": "Chuva leve",
+                "quantidadeAgua": 3,
+                "nivelRisco": "Baixo",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Olinda",
+            "estado": "Pernambuco",
+            "dados": {
+                "nivelRio": 3.0,
+                "previsaoChuva": "Chuva moderada",
+                "quantidadeAgua": 8,
+                "nivelRisco": "Moderado",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Paulista",
+            "estado": "Pernambuco",
+            "dados": {
+                "nivelRio": 1.8,
+                "previsaoChuva": "Sem previsão",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Caruaru",
+            "estado": "Pernambuco",
+            "dados": {
+                "nivelRio": 1.6,
+                "previsaoChuva": "Céu limpo",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Garanhuns",
+            "estado": "Pernambuco",
+            "dados": {
+                "nivelRio": 2.1,
+                "previsaoChuva": "Chuva leve",
+                "quantidadeAgua": 2,
+                "nivelRisco": "Baixo",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Gravatá",
+            "estado": "Pernambuco",
+            "dados": {
+                "nivelRio": 2.3,
+                "previsaoChuva": "Chuva moderada",
+                "quantidadeAgua": 5,
+                "nivelRisco": "Moderado",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Limoeiro",
+            "estado": "Pernambuco",
+            "dados": {
+                "nivelRio": 1.9,
+                "previsaoChuva": "Céu limpo",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Belém de Maria",
+            "estado": "Pernambuco",
+            "dados": {
+                "nivelRio": 1.5,
+                "previsaoChuva": "Sem previsão",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "São João",
+            "estado": "Pernambuco",
+            "dados": {
+                "nivelRio": 2.0,
+                "previsaoChuva": "Chuva leve",
+                "quantidadeAgua": 3,
+                "nivelRisco": "Baixo",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Belo Jardim",
+            "estado": "Pernambuco",
+            "dados": {
+                "nivelRio": 2.4,
+                "previsaoChuva": "Chuva moderada",
+                "quantidadeAgua": 6,
+                "nivelRisco": "Moderado",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Pesqueira",
+            "estado": "Pernambuco",
+            "dados": {
+                "nivelRio": 1.7,
+                "previsaoChuva": "Céu limpo",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Venturosa",
+            "estado": "Pernambuco",
+            "dados": {
+                "nivelRio": 1.3,
+                "previsaoChuva": "Chuva leve",
+                "quantidadeAgua": 2,
+                "nivelRisco": "Baixo",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Sertânia",
+            "estado": "Pernambuco",
+            "dados": {
+                "nivelRio": 2.2,
+                "previsaoChuva": "Sem previsão",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Arcoverde",
+            "estado": "Pernambuco",
+            "dados": {
+                "nivelRio": 1.8,
+                "previsaoChuva": "Chuva moderada",
+                "quantidadeAgua": 5,
+                "nivelRisco": "Moderado",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Quipapá",
+            "estado": "Pernambuco",
+            "dados": {
+                "nivelRio": 1.4,
+                "previsaoChuva": "Céu limpo",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Toritama",
+            "estado": "Pernambuco",
+            "dados": {
+                "nivelRio": 1.9,
+                "previsaoChuva": "Chuva leve",
+                "quantidadeAgua": 4,
+                "nivelRisco": "Baixo",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Sorocaba",
+            "estado": "São Paulo",
+            "dados": {
+                "nivelRio": 1.5,
+                "previsaoChuva": "Céu limpo",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Jundiaí",
+            "estado": "São Paulo",
+            "dados": {
+                "nivelRio": 2.1,
+                "previsaoChuva": "Chuva leve",
+                "quantidadeAgua": 3,
+                "nivelRisco": "Baixo",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "São Vicente",
+            "estado": "São Paulo",
+            "dados": {
+                "nivelRio": 2.8,
+                "previsaoChuva": "Chuva moderada",
+                "quantidadeAgua": 6,
+                "nivelRisco": "Moderado",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Mauá",
+            "estado": "São Paulo",
+            "dados": {
+                "nivelRio": 2.3,
+                "previsaoChuva": "Sem previsão",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Itapevi",
+            "estado": "São Paulo",
+            "dados": {
+                "nivelRio": 1.7,
+                "previsaoChuva": "Céu limpo",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Franca",
+            "estado": "São Paulo",
+            "dados": {
+                "nivelRio": 1.6,
+                "previsaoChuva": "Chuva leve",
+                "quantidadeAgua": 2,
+                "nivelRisco": "Baixo",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "São Carlos",
+            "estado": "São Paulo",
+            "dados": {
+                "nivelRio": 2.2,
+                "previsaoChuva": "Chuva moderada",
+                "quantidadeAgua": 5,
+                "nivelRisco": "Moderado",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Cotia",
+            "estado": "São Paulo",
+            "dados": {
+                "nivelRio": 1.4,
+                "previsaoChuva": "Céu limpo",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Itatiba",
+            "estado": "São Paulo",
+            "dados": {
+                "nivelRio": 2.0,
+                "previsaoChuva": "Chuva leve",
+                "quantidadeAgua": 4,
+                "nivelRisco": "Baixo",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Araraquara",
+            "estado": "São Paulo",
+            "dados": {
+                "nivelRio": 1.9,
+                "previsaoChuva": "Sem previsão",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Barueri",
+            "estado": "São Paulo",
+            "dados": {
+                "nivelRio": 2.4,
+                "previsaoChuva": "Chuva moderada",
+                "quantidadeAgua": 5,
+                "nivelRisco": "Moderado",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Limeira",
+            "estado": "São Paulo",
+            "dados": {
+                "nivelRio": 1.8,
+                "previsaoChuva": "Chuva leve",
+                "quantidadeAgua": 2,
+                "nivelRisco": "Baixo",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Presidente Prudente",
+            "estado": "São Paulo",
+            "dados": {
+                "nivelRio": 1.5,
+                "previsaoChuva": "Céu limpo",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "São João da Boa Vista",
+            "estado": "São Paulo",
+            "dados": {
+                "nivelRio": 2.1,
+                "previsaoChuva": "Chuva moderada",
+                "quantidadeAgua": 6,
+                "nivelRisco": "Moderado",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Niterói",
+            "estado": "Rio de Janeiro",
+            "dados": {
+                "nivelRio": 2.0,
+                "previsaoChuva": "Céu limpo",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Petrópolis",
+            "estado": "Rio de Janeiro",
+            "dados": {
+                "nivelRio": 3.5,
+                "previsaoChuva": "Chuva leve",
+                "quantidadeAgua": 5,
+                "nivelRisco": "Moderado",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Nova Iguaçu",
+            "estado": "Rio de Janeiro",
+            "dados": {
+                "nivelRio": 2.8,
+                "previsaoChuva": "Céu limpo",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Volta Redonda",
+            "estado": "Rio de Janeiro",
+            "dados": {
+                "nivelRio": 1.9,
+                "previsaoChuva": "Chuva moderada",
+                "quantidadeAgua": 4,
+                "nivelRisco": "Moderado",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Teresópolis",
+            "estado": "Rio de Janeiro",
+            "dados": {
+                "nivelRio": 2.2,
+                "previsaoChuva": "Sem previsão",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Belford Roxo",
+            "estado": "Rio de Janeiro",
+            "dados": {
+                "nivelRio": 2.5,
+                "previsaoChuva": "Chuva leve",
+                "quantidadeAgua": 2,
+                "nivelRisco": "Baixo",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "São Gonçalo",
+            "estado": "Rio de Janeiro",
+            "dados": {
+                "nivelRio": 3.1,
+                "previsaoChuva": "Chuva moderada",
+                "quantidadeAgua": 6,
+                "nivelRisco": "Moderado",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Macaé",
+            "estado": "Rio de Janeiro",
+            "dados": {
+                "nivelRio": 1.8,
+                "previsaoChuva": "Céu limpo",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Angra dos Reis",
+            "estado": "Rio de Janeiro",
+            "dados": {
+                "nivelRio": 3.0,
+                "previsaoChuva": "Chuva leve",
+                "quantidadeAgua": 3,
+                "nivelRisco": "Baixo",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Rio Bonito",
+            "estado": "Rio de Janeiro",
+            "dados": {
+                "nivelRio": 2.6,
+                "previsaoChuva": "Sem previsão",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Cabo Frio",
+            "estado": "Rio de Janeiro",
+            "dados": {
+                "nivelRio": 1.7,
+                "previsaoChuva": "Céu limpo",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Araruama",
+            "estado": "Rio de Janeiro",
+            "dados": {
+                "nivelRio": 2.4,
+                "previsaoChuva": "Chuva moderada",
+                "quantidadeAgua": 5,
+                "nivelRisco": "Moderado",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Resende",
+            "estado": "Rio de Janeiro",
+            "dados": {
+                "nivelRio": 2.9,
+                "previsaoChuva": "Chuva leve",
+                "quantidadeAgua": 1,
+                "nivelRisco": "Baixo",
+                "clima": "nublado"
+            }
+        },
+        {
+            "nome": "Barra Mansa",
+            "estado": "Rio de Janeiro",
+            "dados": {
+                "nivelRio": 2.1,
+                "previsaoChuva": "Sem previsão",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Quissamã",
+            "estado": "Rio de Janeiro",
+            "dados": {
+                "nivelRio": 1.6,
+                "previsaoChuva": "Céu limpo",
+                "quantidadeAgua": 0,
+                "nivelRisco": "Baixo",
+                "clima": "sol"
+            }
+        },
+        {
+            "nome": "Tanguá",
+            "estado": "Rio de Janeiro",
+            "dados": {
+                "nivelRio": 1.9,
+                "previsaoChuva": "Chuva leve",
+                "quantidadeAgua": 2,
+                "nivelRisco": "Baixo",
+                "clima": "nublado"
+            }
+        }
+    ]
+}
