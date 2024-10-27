@@ -1,7 +1,6 @@
 <p align="left">
-  Hackathon Recode Pro AI - Soluções para Enchentes do Rio Grande do Sul
-  <br>
-  ##🌊 Hackathon Recode Pro AI 🌊
+
+##🌊 Hackathon Recode Pro AI 🌊
 
 <br>
 🚧 **Status:** Em Progresso ✔️
