@@ -98,6 +98,37 @@ main {
   font-size: 1.125rem;
 }
 
+section {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  margin-bottom: 2rem;
+}
+
+section h2 {
+  color: var(--text-dark);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+section p {
+  line-height: 1.6;
+}
+
+section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+section ul li {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 .form-container {
   background: white;
   border-radius: 1rem;
@@ -141,20 +172,20 @@ main {
 
 .form-submit {
   display: flex;
-  justify-content: center; /* Centraliza o botão horizontalmente */
-  margin-top: 1rem; /* Espaçamento para separar o botão dos campos acima */
+  justify-content: center;
+  margin-top: 1rem;
 }
 
 .submit-btn {
-  width: fit-content; /* Ajusta a largura do botão */
-  padding: 0.75rem 2rem; /* Tamanho do botão */
+  width: auto;
+  padding: 0.5rem 1.5rem;
   background: var(--primary-color);
   color: white;
   border: none;
   border-radius: 0.5rem;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s, transform 0.2s;
 }
 
 .submit-btn:hover {
@@ -167,10 +198,9 @@ main {
 }
 
 .fale-conosco-form p {
-  margin-bottom: 2rem; /* Ajuste o valor conforme necessário */
+  margin-bottom: 2rem;
 }
 
-/* Estilo do contêiner do formulário */
 .fale-conosco-form {
   background: white;
   border-radius: 1rem;
@@ -181,37 +211,32 @@ main {
   transition: transform 0.2s;
 }
 
-/* Efeito de elevação ao passar o mouse */
 .fale-conosco-form:hover {
   transform: translateY(-2px);
 }
 
-/* Estilo dos grupos de formulário */
 .fale-conosco-form .form-group {
-  margin-bottom: 1.5rem; /* Aumenta o espaçamento entre os grupos */
+  margin-bottom: 1.5rem;
 }
 
-/* Estilo dos rótulos */
 .fale-conosco-form .form-group label {
   display: block;
-  font-size: 1rem; /* Aumenta o tamanho da fonte do rótulo */
+  font-size: 1rem;
   color: var(--text-dark);
   margin-bottom: 0.5rem;
 }
 
-/* Estilo dos campos de entrada, seleção e texto */
 .fale-conosco-form .form-group input,
 .fale-conosco-form .form-group select,
 .fale-conosco-form .form-group textarea {
   width: 100%;
-  padding: 0.75rem 1rem; /* Aumenta o padding */
+  padding: 0.75rem 1rem;
   border: 1px solid #e2e8f0;
   border-radius: 0.5rem;
   outline: none;
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-/* Efeito de foco nos campos */
 .fale-conosco-form .form-group input:focus,
 .fale-conosco-form .form-group select:focus,
 .fale-conosco-form .form-group textarea:focus {
@@ -219,33 +244,28 @@ main {
   box-shadow: 0 0 0 2px rgba(2, 132, 199, 0.2);
 }
 
-
-/* Estilo da área de texto */
 .fale-conosco-form textarea {
-  resize: vertical; /* Permite redimensionar apenas verticalmente */
-  min-height: 100px; /* Altura mínima para a área de texto */
+  resize: vertical;
+  min-height: 100px;
 }
 
-/* Estilo do botão de envio */
 .fale-conosco-form .submit-btn {
-  width: 100%; /* Largura total do botão */
-  padding: 0.75rem; /* Tamanho do botão */
+  width: 100%;
+  padding: 0.75rem;
   background: var(--primary-color);
   color: white;
   border: none;
   border-radius: 0.5rem;
-  font-weight: 600; /* Aumenta o peso da fonte */
+  font-weight: 600;
   cursor: pointer;
   transition: background-color 0.2s, transform 0.2s;
 }
 
-/* Efeito de hover no botão */
 .fale-conosco-form .submit-btn:hover {
   background-color: #0369a1;
-  transform: translateY(-2px); /* Efeito de elevação ao passar o mouse */
+  transform: translateY(-2px);
 }
 
-/* Estilo do botão desabilitado */
 .fale-conosco-form .submit-btn:disabled {
   opacity: 0.7;
   cursor: not-allowed;
@@ -266,4 +286,151 @@ main {
 
 .hidden {
   display: none;
+}
+
+/* Estilos para a seção de Informações de Risco */
+#riscos {
+  padding: 40px;
+  background-color: var(--gray-light);
+  border-radius: 1rem;
+  margin: 20px 0;
+}
+
+#riscos h2 {
+  color: var(--text-dark);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#riscos h3 {
+  font-size: 2rem;
+  margin-top: 40px;
+}
+
+#riscos ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#riscos li {
+  margin: 15px 0;
+  padding: 10px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#riscos .icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.item {
+  cursor: pointer;
+  color: #0284c7;
+  text-decoration: underline;
+}
+
+.item:hover {
+  color: #0369a1;
+}
+
+.info {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries */
+@media (max-width: 767px) {
+  .nav-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .header p {
+    font-size: 1rem;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+  }
+
+  .form-group label {
+    font-size: 0.75rem;
+  }
+
+  .form-group input,
+  .form-group select {
+    font-size: 0.875rem;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+
+  #riscos h2 {
+    font-size: 2rem;
+  }
+
+  #riscos h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    flex-direction: row;
+  }
+
+  .header h1 {
+    font-size: 2.5rem;
+  }
+
+  .header p {
+    font-size: 1.125rem;
+  }
+
+  section h2 {
+    font-size: 2rem;
+  }
+
+  .form-group label {
+    font-size: 0.875rem;
+  }
+
+  .form-group input,
+  .form-group select {
+    font-size: 1rem;
+  }
+
+  .submit-btn {
+    width: auto;
+  }
+
+  #riscos h2 {
+    font-size: 2.5rem;
+  }
+
+  #riscos h3 {
+    font-size: 2rem;
+  }
 }

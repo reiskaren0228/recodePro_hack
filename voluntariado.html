@@ -1,48 +1,159 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voluntariado</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link para o CSS, se necessário -->
-</head>
-<body>
-    <!-- Cabeçalho -->
-    <header id="main-header"></header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voluntariado - Tempo Amigo</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.1/feather.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Cabeçalho da Navegação -->
+    <header id="main-header">
+      <h1>Voluntariado - Tempo Amigo</h1>
+    </header>
 
-    <!-- Conteúdo principal -->
-    <section style="padding: 40px; background-color: #f9f9f9">
-        <div style="max-width: 800px; margin: auto; text-align: center">
-            <h1 style="font-size: 2.5em; margin-bottom: 20px">Voluntariado</h1>
-            <p style="font-size: 1.2em; line-height: 1.6">
-                Seja parte da mudança! O voluntariado é uma ótima maneira de ajudar sua comunidade e fazer a diferença na vida das pessoas.
-            </p>
-            <h2 style="font-size: 2em; margin-top: 40px">Como Participar</h2>
-            <p style="font-size: 1.2em; line-height: 1.6">
-                Você pode se envolver em diversas atividades de voluntariado, como:
-            </p>
-            <ul style="list-style-type: none; padding: 0; font-size: 1.2em; line-height: 1.6">
-                <li>&bull; Assistência em eventos comunitários</li>
-                <li>&bull; Atendimento a grupos vulneráveis</li>
-                <li>&bull; Campanhas de conscientização ambiental</li>
-            </ul>
-            <p style="font-size: 1.2em; line-height: 1.6">
-                Para saber mais sobre oportunidades de voluntariado, entre em contato conosco!
-            </p>
-        </div>
-    </section>
+    <main>
+      <!-- Seção Como Participar -->
+      <section class="como-participar">
+        <h2><i data-feather="help-circle"></i> Como Participar</h2>
+        <p>
+          Você pode se envolver em diversas atividades de voluntariado, como:
+        </p>
+        <ul>
+          <li>
+            <span class="item" onclick="toggleInfo('info1')">
+              &bull; Assistência para Animais
+            </span>
+            <div id="info1" class="info" style="display: none">
+              <p>Para mais informações sobre eventos comunitários, acesse:</p>
+              <a
+                href="https://sosenchentes.rs.gov.br/assistencia-para-animais"
+                target="_blank"
+                >Mais informações</a
+              >
+            </div>
+          </li>
+          <li>
+            <span class="item" onclick="toggleInfo('info2')">
+              &bull; Atendimento para cuidados com grupos vulneráveis
+            </span>
+            <div id="info2" class="info" style="display: none">
+              <p>Saiba mais sobre como ajudar grupos vulneráveis:</p>
+              <a
+                href="https://sosenchentes.rs.gov.br/consultas-medicas-e-psicologicas"
+                target="_blank"
+                >Informações sobre locais de atendimento</a
+              >
+            </div>
+          </li>
+          <li>
+            <span class="item" onclick="toggleInfo('info3')">
+              &bull; Solicitar doações para campanhas de conscientização
+              ambiental e demais ações
+            </span>
+            <div id="info3" class="info" style="display: none">
+              <p>Participe das campanhas de conscientização ambiental:</p>
+              <a
+                href="https://sosenchentes.rs.gov.br/doacoes-em-geral"
+                target="_blank"
+                >Doações em geral</a
+              >
+            </div>
+          </li>
 
-    <!-- Rodapé -->
-    <footer>
-        <p>&copy; 2024 Tempo Amigo</p>
-    </footer>
+          <li>
+            <span class="item" onclick="toggleInfo('info3')">
+              &bull; Como solicitar pedido de socorro ou ajuda
+            </span>
+            <div id="info3" class="info" style="display: none">
+              <p>Participe das campanhas de conscientização ambiental:</p>
+              <a
+                href="https://sosenchentes.rs.gov.br/como-pedir-socorro"
+                target="_blank"
+                >Pedir Socorro</a
+              >
+            </div>
+          </li>
+        </ul>
+        <p>
+          Para saber mais sobre oportunidades de voluntariado, entre em
+          <a href="contato.html" target="_blank">contato conosco!</a>
+        </p>
+      </section>
 
+      <!-- Seção Cadastro de Voluntários -->
+      <section class="cadastro-voluntarios">
+        <h2><i data-feather="file-text"></i> Cadastro de Voluntários</h2>
+        <p>
+          A Coordenadoria Estadual de Proteção e Defesa Civil do Rio Grande do
+          Sul lançou um formulário para voluntários que desejam atuar em tarefas
+          de organização, seleção e triagem das doações de ajuda humanitária.
+          Instituições, empresas e grupos interessados no voluntariado podem
+          preencher o cadastro
+          <a
+            href="https://casamilitar-rs.com.br/voluntariado/"
+            target="_blank"
+            style="text-decoration: underline"
+            >neste link</a
+          >.
+        </p>
+      </section>
 
-      <script src="scripts.js"></script>
+      <!-- Seção Parceria Transforma Brasil -->
+      <section class="parceria-transforma">
+        <h2><i data-feather="users"></i> Parceria Transforma Brasil</h2>
+        <p>
+          A Secretaria de Desenvolvimento Social (SEDES), em parceria com o
+          Transforma Brasil, disponibilizou uma plataforma para voluntários que
+          desejam ajudar em abrigos, centros de distribuição ou de forma remota.
+          Instituições sociais, empresas e grupos interessados no voluntariado
+          podem se inscrever
+          <a
+            href="https://transformabrasil.com.br/acao/centro-de-logistica-da-defesa-civil-rs"
+            target="_blank"
+            style="text-decoration: underline"
+            >aqui</a
+          >.
+        </p>
+      </section>
+
+      <!-- Seção Profissionais de Saúde Voluntários -->
+      <section class="profissionais-saude">
+        <h2><i data-feather="heart"></i> Profissionais de Saúde Voluntários</h2>
+        <p>
+          A Secretaria da Saúde (SES) está cadastrando profissionais de saúde
+          para compor um banco de voluntários, que poderão auxiliar os
+          municípios gaúchos afetados pelas chuvas intensas e enchentes.
+          Médicos, enfermeiros, fisioterapeutas, fonoaudiólogos e outros
+          profissionais de saúde são bem-vindos a se cadastrar.
+        </p>
+
+        <p>
+          Os interessados devem preencher o formulário disponível no site da
+          <a
+            href="https://saude.rs.gov.br/cadastro-de-profissionais"
+            target="_blank"
+            >SES</a
+          >. Ao se registrar, o profissional autoriza a SES a disponibilizar
+          seus dados para gestões municipais e instituições de saúde, caso haja
+          necessidade de ampliação da força de trabalho.
+        </p>
+        <p>
+          Importante destacar que o cadastro é destinado a profissionais com
+          disponibilidade de carga horária e interesse em ajudar os municípios.
+          A inscrição não garante o chamamento do profissional e não gera
+          vínculo empregatício com o Estado.
+        </p>
+      </section>
+    </main>
+
+   <!-- Rodapé -->
+    <script src="scripts.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         feather.replace();
       });
     </script>
-</body>
+  </body>
 </html>

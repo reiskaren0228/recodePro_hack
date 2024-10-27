@@ -1,7 +1,5 @@
 const navButtons = document.querySelectorAll(".nav-button");
 const contentSections = document.querySelectorAll("main > div");
-const weatherForm = document.getElementById("weather-form");
-const weatherInfo = document.getElementById("weather-info");
 let cidadesData = [];
 
 // Carregar dados do JSON
@@ -22,6 +20,11 @@ async function loadCidadesData() {
 // Função para popular o dropdown de estados
 function populateEstadoDropdown() {
   const estadoSelect = document.getElementById("estado");
+  if (!estadoSelect) {
+    console.error("Elemento 'estado' não encontrado.");
+    return;
+  }
+
   estadoSelect.innerHTML = '<option value="">Selecione um Estado</option>';
 
   const estados = [
@@ -43,6 +46,11 @@ function populateEstadoDropdown() {
 // Função para popular o dropdown de cidades baseado no estado selecionado
 function populateCityDropdown(estadoSelecionado) {
   const cidadeSelect = document.getElementById("cidade");
+  if (!cidadeSelect) {
+    console.error("Elemento 'cidade' não encontrado.");
+    return;
+  }
+
   cidadeSelect.innerHTML = '<option value="">Selecione uma Cidade</option>';
 
   if (!estadoSelecionado) return;
@@ -59,72 +67,94 @@ function populateCityDropdown(estadoSelecionado) {
   }
 }
 
-// Exibir informações climáticas da cidade selecionada
-weatherForm.addEventListener("submit", (event) => {
-  event.preventDefault();
+// Inicializa o carregamento dos dados e eventos
+document.addEventListener("DOMContentLoaded", async () => {
+  await loadCidadesData();
+  await loadNavbar();
 
-  const cidadeNome = document.getElementById("cidade").value;
-  const cidadeInfo = cidadesData.find((cidade) => cidade.nome === cidadeNome);
+  const weatherForm = document.getElementById("weather-form");
+  const weatherInfo = document.getElementById("weather-info");
 
-  if (cidadeInfo) {
-    weatherInfo.innerHTML = `
-      <h3>Dados de ${cidadeInfo.nome}, ${cidadeInfo.estado}</h3>
-      <p>Nível do Rio: ${cidadeInfo.dados.nivelRio}</p>
-      <p>Previsão de Chuva: ${cidadeInfo.dados.previsaoChuva}</p>
-      <p>Quantidade de Água: ${cidadeInfo.dados.quantidadeAgua} mm</p>
-      <p>Nível de Risco: ${cidadeInfo.dados.nivelRisco}</p>
-      <p>Clima: ${cidadeInfo.dados.clima}</p>
-    `;
-    weatherInfo.classList.remove("hidden");
+  if (weatherForm) {
+    weatherForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const cidadeNome = document.getElementById("cidade").value;
+      const cidadeInfo = cidadesData.find(
+        (cidade) => cidade.nome === cidadeNome
+      );
+
+      if (cidadeInfo) {
+        weatherInfo.innerHTML = `
+                    <h3>Dados de ${cidadeInfo.nome}, ${cidadeInfo.estado}</h3>
+                    <p>Nível do Rio: ${cidadeInfo.dados.nivelRio}</p>
+                    <p>Previsão de Chuva: ${cidadeInfo.dados.previsaoChuva}</p>
+                    <p>Quantidade de Água: ${cidadeInfo.dados.quantidadeAgua} mm</p>
+                    <p>Nível de Risco: ${cidadeInfo.dados.nivelRisco}</p>
+                    <p>Clima: ${cidadeInfo.dados.clima}</p>
+                `;
+        weatherInfo.classList.remove("hidden");
+      } else {
+        weatherInfo.innerHTML =
+          "<p>Dados não encontrados para a cidade selecionada.</p>";
+        weatherInfo.classList.remove("hidden");
+      }
+    });
   } else {
-    weatherInfo.innerHTML =
-      "<p>Dados não encontrados para a cidade selecionada.</p>";
-    weatherInfo.classList.remove("hidden");
+    console.error("Elemento 'weather-form' não encontrado.");
+  }
+
+  // Configuração dos botões de navegação
+  for (const button of navButtons) {
+    button.addEventListener("click", () => {
+      for (const btn of navButtons) {
+        btn.classList.remove("active");
+      }
+      button.classList.add("active");
+
+      const tabId = button.getAttribute("data-tab");
+      for (const section of contentSections) {
+        section.classList.toggle("hidden", section.id !== `${tabId}-content`);
+      }
+    });
+  }
+
+  const contatoForm = document.getElementById("contatoForm");
+  if (contatoForm) {
+    contatoForm.addEventListener("submit", handleContactFormSubmission);
+  } else {
+    console.error("Elemento 'contatoForm' não encontrado.");
   }
 });
 
-// Configuração dos botões de navegação
-for (const button of navButtons) {
-  button.addEventListener("click", () => {
-    for (const btn of navButtons) {
-      btn.classList.remove("active");
-    }
-    button.classList.add("active");
-
-    const tabId = button.getAttribute("data-tab");
-    for (const section of contentSections) {
-      section.classList.toggle("hidden", section.id !== `${tabId}-content`);
-    }
-  });
-}
-
-// Função para carregar o navbar
+// Carregar Navbar
 async function loadNavbar() {
   try {
     const response = await fetch("navbar.html");
+    if (!response.ok) {
+      throw new Error(`Erro ao carregar o navbar: ${response.statusText}`);
+    }
     const data = await response.text();
     document.getElementById("main-header").innerHTML = data;
-    feather.replace(); // Recarrega os ícones Feather após carregar o nav
+    console.log("Navbar carregado com sucesso!");
+    feather.replace();
   } catch (error) {
-    console.error("Erro ao carregar o navbar:", error);
+    console.error(error);
   }
 }
-
-document.addEventListener("DOMContentLoaded", loadNavbar);
 
 // Manipulação do formulário de contato
 async function handleContactFormSubmission(e) {
   e.preventDefault();
 
   const formData = {
-    contato: document.querySelector('input[name="contato"]:checked').value,
     nome: document.getElementById("nome").value,
     email: document.getElementById("email").value,
     mensagem: document.getElementById("mensagem").value,
   };
 
   try {
-    const response = await fetch("https://formspree.io/f/mblravbe", {
+    const response = await fetch("https://formspree.io/f/mqakeern", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -144,12 +174,33 @@ async function handleContactFormSubmission(e) {
   }
 }
 
-// Inicializa o carregamento dos dados e eventos
-document.addEventListener("DOMContentLoaded", async () => {
-  await loadCidadesData();
-  await loadNavbar();
+function toggleInfo(infoId) {
+  const infoDiv = document.getElementById(infoId);
+  if (infoDiv.style.display === "none") {
+    infoDiv.style.display = "block";
+  } else {
+    infoDiv.style.display = "none";
+  }
+}
 
-  document
-    .getElementById("contatoForm")
-    .addEventListener("submit", handleContactFormSubmission);
-});
+
+function loadFooter() {
+  fetch("footer.html")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`Erro ao carregar o footer: ${response.statusText}`);
+      }
+      return response.text();
+    })
+    .then((data) => {
+      const footer = document.createElement("footer");
+      footer.innerHTML = data;
+      document.body.appendChild(footer);
+    })
+    .catch((error) => {
+      console.error("Erro ao carregar o footer:", error);
+    });
+}
+
+// Chame a função para carregar o footer
+document.addEventListener("DOMContentLoaded", loadFooter);

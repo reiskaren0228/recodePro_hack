@@ -8,18 +8,19 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Cabeçalho -->
+    <!-- Cabeçalho da Navegação -->
     <header id="main-header"></header>
 
     <main>
       <div id="home-content">
-        <header class="header">
+        <!-- Cabeçalho da Página -->
+        <section class="header">
           <h1>Monitoramento Climático</h1>
           <p>
             Monitoramento em tempo real e educação para prevenção de desastres
             climáticos
           </p>
-        </header>
+        </section>
 
         <section class="form-container">
           <h2 style="margin-bottom: 1.5rem; color: var(--text-dark)">
@@ -58,7 +59,6 @@
                 <option value="">Selecione uma Cidade</option>
               </select>
             </div>
-            <!-- Envolva o botão em um div específico para centralizá-lo -->
             <div class="form-submit">
               <button type="submit" class="submit-btn" id="submit-btn">
                 Mostrar Previsões
@@ -71,6 +71,7 @@
       </div>
     </main>
 
+    <!-- Rodapé -->
     <script src="scripts.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {

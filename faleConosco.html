@@ -3,64 +3,77 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fale Conosco - Soluções para Enchentes</title>
+    <title>Fale Conosco</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.1/feather.min.js"></script>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Cabeçalho -->
-    <header id="main-header"></header>
+    
+    <!-- Cabeçalho da Navegação -->
+    <header id="main-header">
+      <h1>Fale Conosco - Tempo Amigo</h1>
+    </header>
 
-    <!-- Conteúdo principal -->
-    <section>
-      <div
-        style="
-          max-width: 600px;
-          margin: auto;
-          padding: 20px;
-          background-color: #f9f9f9;
-        "
-      >
-        <h1 style="text-align: center; margin-bottom: 20px">Fale Conosco</h1>
-        <p style="font-size: 1.2em; line-height: 1.6">
+    <main>
+      <div class="contato-container">
+        <h2>Entre em Contato</h2>
+        <br>
+        <p>
           Entre em contato conosco para esclarecer suas dúvidas, fornecer
           feedback ou sugerir soluções para evitar enchentes no Rio Grande do
           Sul. Sua opinião é muito importante para nós!
         </p>
 
-        <p style="font-size: 1.2em; line-height: 1.6">
-          Por favor, preencha os campos abaixo:
-        </p>
+        <p>Por favor, preencha os campos abaixo:</p>
 
-        <form id="contatoForm" class="fale-conosco-form">
+        <form
+          id="contatoForm"
+          class="fale-conosco-form"
+          onsubmit="handleContactFormSubmission(event)"
+        >
           <div class="form-group">
             <label for="nome">Nome Completo</label>
-            <input type="text" id="nome" name="nome" required />
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Seu nome completo"
+              required
+            />
           </div>
 
           <div class="form-group">
             <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" required />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Seu e-mail"
+              required
+            />
           </div>
-          <p style="font-size: 1.2em; line-height: 1.6">
-            Sua mensagem é importante para nós:
-          </p>
+
+          <p>Sua mensagem é importante para nós:</p>
           <div class="form-group">
             <label for="mensagem">Deixe sua mensagem</label>
-            <textarea id="mensagem" name="mensagem" required></textarea>
+            <textarea
+              id="mensagem"
+              name="mensagem"
+              placeholder="Sua mensagem aqui..."
+              required
+            ></textarea>
           </div>
-          <div class="form-submit">
-            <button type="submit" class="submit-btn">Enviar</button>
+          <div class="form-submit-enviar">
+            <button type="submit" class="submit-btn-enviarEnviar">
+              Enviar
+            </button>
           </div>
         </form>
       </div>
-    </section>
+    </main>
 
-    <!-- Rodapé -->
-    <footer>
-      <p>&copy; 2024 Tempo Amigo</p>
-    </footer>
-
-     <script src="scripts.js"></script>
+   <!-- Rodapé -->
+    <script src="scripts.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         feather.replace();
