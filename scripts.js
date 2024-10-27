@@ -67,7 +67,7 @@ function populateCityDropdown(estadoSelecionado) {
   }
 }
 
-// Inicializa o carregamento dos dados e eventos
+/// Inicializa o carregamento dos dados e eventos
 document.addEventListener("DOMContentLoaded", async () => {
   await loadCidadesData();
   await loadNavbar();
@@ -85,14 +85,87 @@ document.addEventListener("DOMContentLoaded", async () => {
       );
 
       if (cidadeInfo) {
+        const getWeatherIcon = (clima) => {
+          switch (clima.toLowerCase()) {
+            case "sol":
+              return "sun";
+            case "nublado":
+              return "cloud";
+            case "tempestade":
+              return "cloud-rain";
+            default:
+              return "cloud";
+          }
+        };
+
+        const getRiskLevelColor = (nivel) => {
+          switch (nivel.toLowerCase()) {
+            case "baixo":
+              return "#10B981"; // text-green-500
+            case "médio":
+              return "#F59E0B"; // text-yellow-500
+            case "alto":
+              return "#EF4444"; // text-red-500
+            default:
+              return "#6B7280"; // text-gray-500
+          }
+        };
+
         weatherInfo.innerHTML = `
-                    <h3>Dados de ${cidadeInfo.nome}, ${cidadeInfo.estado}</h3>
-                    <p>Nível do Rio: ${cidadeInfo.dados.nivelRio}</p>
-                    <p>Previsão de Chuva: ${cidadeInfo.dados.previsaoChuva}</p>
-                    <p>Quantidade de Água: ${cidadeInfo.dados.quantidadeAgua} mm</p>
-                    <p>Nível de Risco: ${cidadeInfo.dados.nivelRisco}</p>
-                    <p>Clima: ${cidadeInfo.dados.clima}</p>
-                `;
+  <div class="weather-info">
+    <h3>Dados de ${cidadeInfo.nome}, ${cidadeInfo.estado}</h3>
+    
+    <div class="grid">
+      <div class="info-card river">
+        <div class="label-group">
+          <i data-feather="droplet" class="icon-blue"></i>
+          <span class="label">Nível do Rio:</span>
+        </div>
+        <span class="value">${cidadeInfo.dados.nivelRio}</span>
+      </div>
+
+      <div class="info-card rain">
+        <div class="label-group">
+          <i data-feather="cloud-drizzle" class="icon-purple"></i>
+          <span class="label">Previsão de Chuva:</span>
+        </div>
+        <span class="value">${cidadeInfo.dados.previsaoChuva}</span>
+      </div>
+
+      <div class="info-card water">
+        <div class="label-group">
+          <i data-feather="activity" class="icon-cyan"></i>
+          <span class="label">Quantidade de Água:</span>
+        </div>
+        <span class="value">${cidadeInfo.dados.quantidadeAgua} mm</span>
+      </div>
+
+      <div class="info-card risk">
+        <div class="label-group">
+          <i data-feather="alert-triangle" class="icon-orange"></i>
+          <span class="label">Nível de Risco:</span>
+        </div>
+        <span class="value risk-${cidadeInfo.dados.nivelRisco.toLowerCase()}">${
+          cidadeInfo.dados.nivelRisco
+        }</span>
+      </div>
+
+      <div class="info-card weather">
+        <div class="label-group">
+          <i data-feather="${getWeatherIcon(
+            cidadeInfo.dados.clima
+          )}" class="icon-yellow"></i>
+          <span class="label">Clima:</span>
+        </div>
+        <span class="value">${cidadeInfo.dados.clima}</span>
+      </div>
+    </div>
+  </div>
+`;
+
+        // Importante: Precisa chamar feather.replace() após inserir os ícones
+        feather.replace();
+
         weatherInfo.classList.remove("hidden");
       } else {
         weatherInfo.innerHTML =
@@ -182,7 +255,6 @@ function toggleInfo(infoId) {
     infoDiv.style.display = "none";
   }
 }
-
 
 function loadFooter() {
   fetch("footer.html")
