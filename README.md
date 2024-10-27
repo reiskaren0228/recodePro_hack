@@ -1,6 +1,6 @@
 <p align="left">
 
-##🌊 Hackathon Recode Pro AI 🌊
+## 🌊 Hackathon Recode Pro AI 🌊
 
 <br>
 🚧 **Status:** Em Progresso ✔️
