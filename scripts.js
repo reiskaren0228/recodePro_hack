@@ -291,11 +291,11 @@ function mostrarAlertas() {
 }
 
 // Exemplo de como os alertas seriam inseridos dinamicamente (em uma aplicação real, isso viria de uma API)
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", () => {
   mostrarAlertas();
 });
 
-document.getElementById('relato-form').addEventListener('submit', function(event) {
+document.getElementById('relato-form').addEventListener('submit', (event) => {
   event.preventDefault(); // Impedir que o formulário seja enviado da maneira tradicional
   
   // Capturar os dados do formulário

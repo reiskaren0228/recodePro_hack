@@ -18,6 +18,16 @@
   --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.1);
   --nav-bg: rgba(255, 255, 255, 0.8);
   --form-bg: #f9f9f9;
+  --icon-purple: #9333ea;
+  --icon-cyan: #06b6d4;
+  --icon-orange: #f97316;
+  --icon-yellow: #ca8a04;
+  --risk-low: #10b981;
+  --risk-medium: #f59e0b;
+  --risk-high: #ef4444;
+  --alerta-alto: #dc3545;
+  --alerta-medio: #ffc107;
+  --alerta-baixo: #28a745;
 }
 
 body {
@@ -25,7 +35,6 @@ body {
   background: linear-gradient(to bottom right, #f0f9ff, var(--primary-light));
   position: relative;
   padding-bottom: 80px;
-  font-family: "Segoe UI", system-ui, sans-serif;
   color: var(--text-dark);
   font-family: "Roboto", sans-serif;
 }
@@ -67,6 +76,7 @@ nav .nav-links a {
 .nav-links a:focus,
 .submit-btn:focus {
   outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
 }
 
 .nav-content {
@@ -173,9 +183,8 @@ section ul li {
   box-shadow: var(--shadow-sm);
 }
 
-/* Estilo da área de preparação e ajuda */
 .preparacao-ajuda-container {
-  background-color: var(--primary-light); /* Mantém o fundo claro */
+  background-color: var(--primary-light);
   padding: 20px;
   border-radius: 8px;
   margin-top: 40px;
@@ -183,7 +192,7 @@ section ul li {
 
 .preparacao-titulo,
 .busca-ajuda {
-  color: var(--primary-color); /* Cor do texto de título */
+  color: var(--primary-color);
   font-size: 1.5rem;
   margin-bottom: 10px;
   display: flex;
@@ -202,8 +211,8 @@ section ul li {
 }
 
 .preparacao-lista li i {
-  margin-right: 8px; /* Espaço entre o ícone e o texto */
-  color: var(--primary-color); /* Cor dos ícones */
+  margin-right: 8px;
+  color: var(--primary-color);
 }
 
 .ajuda-contato {
@@ -213,23 +222,20 @@ section ul li {
 }
 
 .ajuda-contato strong {
-  color: #007bff; /* Cor azul para os números de contato */
+  color: #007bff;
 }
 
-/* Ajustes para os ícones */
 .preparacao-titulo i,
 .busca-ajuda i {
   margin-right: 10px;
 }
 
-/* Estilo da área de preparação e ajuda sem borda */
 #instrucoes-preparacao {
   background-color: transparent;
   padding: 0 20px 20px 20px;
   margin-bottom: 20px;
 }
 
-/* Estilo para os cards de alerta */
 #topo-alertas {
   display: flex;
   justify-content: space-between;
@@ -241,7 +247,7 @@ section ul li {
 }
 
 .alerta-card {
-  background-color: var(--card-color);
+  background-color: var(--form-bg);
   border-radius: 10px;
   padding: 15px;
   box-shadow: var(--shadow-md);
@@ -253,15 +259,15 @@ section ul li {
 }
 
 .alerta-alto {
-  border-color: #dc3545; /* Vermelho suave para alerta alto */
+  border-color: var(--alerta-alto);
 }
 
 .alerta-medio {
-  border-color: #ffc107; /* Amarelo suave para alerta médio */
+  border-color: var(--alerta-medio);
 }
 
 .alerta-baixo {
-  border-color: #28a745; /* Verde suave para alerta baixo */
+  border-color: var(--alerta-baixo);
 }
 
 .alerta-card:hover {
@@ -280,7 +286,6 @@ section ul li {
   font-weight: bold;
 }
 
-/* Estilo para a seção de regiões adicionais */
 #detalhes-regioes {
   padding: 10px;
   margin-top: 20px;
@@ -302,38 +307,20 @@ section ul li {
 }
 
 .regiao-alto {
-  border-color: #dc3545; /* Vermelho para alerta alto */
+  border-color: var(--alerta-alto);
 }
 
 .regiao-medio {
-  border-color: #ffc107; /* Amarelo para alerta médio */
+  border-color: var(--alerta-medio);
 }
 
 .regiao-baixo {
-  border-color: #28a745; /* Verde para alerta baixo */
+  border-color: var(--alerta-baixo);
 }
 
-#regioes-container .regiao-card.regiao-alto {
-  border-color: #dc3545 !important; /* Vermelho para alerta alto */
-}
-
-#regioes-container .regiao-card.regiao-medio {
-  border-color: #ffc107 !important; /* Amarelo para alerta médio */
-}
-
-#regioes-container .regiao-card.regiao-baixo {
-  border-color: #28a745 !important; /* Verde para alerta baixo */
-}
-
-.form-container {
-  background: var(--white);
-  border-radius: 1rem;
-  padding: 2rem;
-  box-shadow: var(--shadow-md);
-  margin-bottom: 2rem;
-}
-
-.relatos-container {
+.form-container,
+.relatos-container,
+.map-container {
   background: var(--white);
   border-radius: 1rem;
   padding: 2rem;
@@ -348,14 +335,6 @@ section ul li {
   border-radius: 10px;
   margin-bottom: 10px;
   box-shadow: var(--shadow-sm);
-}
-
-.map-container {
-  background: var(--white);
-  border-radius: 1rem;
-  padding: 2rem;
-  box-shadow: var(--shadow-md);
-  margin-bottom: 2rem;
 }
 
 #mapa-exemplo {
@@ -439,18 +418,11 @@ section ul li {
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.2s, transform 0.2s;
-  text-decoration: none;
+   text-decoration: none;
 }
 
 .submit-btn:hover {
   background-color: var(--hover-primary);
-  text-decoration: none;
-}
-
-.submit-btn a {
-  color: var(--white);
-  font-size: 14px;
-  text-decoration: none;
 }
 
 .submit-btn:disabled {
@@ -458,14 +430,8 @@ section ul li {
   cursor: not-allowed;
 }
 
-.fale-conosco-form p {
-  margin-bottom: 2rem;
-}
-
-.fale-conosco-form select {
-  width: 100%;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+.submit-btn a {
+  text-decoration: none;
 }
 
 .fale-conosco-form {
@@ -482,10 +448,6 @@ section ul li {
   transform: translateY(-2px);
 }
 
-.fale-conosco-form .form-group {
-  margin-bottom: 1.5rem;
-}
-
 .fale-conosco-form .form-group label {
   display: block;
   font-size: 1rem;
@@ -493,53 +455,14 @@ section ul li {
   margin-bottom: 0.5rem;
 }
 
-.fale-conosco-form .form-group input,
-.fale-conosco-form .form-group select,
-.fale-conosco-form .form-group textarea {
+.fale-conosco-form input,
+.fale-conosco-form select,
+.fale-conosco-form textarea {
   width: 100%;
   padding: 0.75rem 1rem;
   border: 1px solid var(--border-color);
   border-radius: 0.5rem;
   outline: none;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.fale-conosco-form .form-group input:focus,
-.fale-conosco-form .form-group select:focus,
-.fale-conosco-form .form-group textarea:focus {
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 2px rgba(2, 132, 199, 0.2);
-}
-
-.fale-conosco-form textarea {
-  resize: vertical;
-  min-height: 100px;
-}
-
-.form-submit-enviar {
-  display: flex;
-  justify-content: center; /* Centraliza o conteúdo horizontalmente */
-  margin-top: 1rem; /* Adiciona um espaço acima do botão, se desejado */
-}
-
-.submit-btn-enviarEnviar {
-  padding: 0.75rem 1.5rem;
-  background-color: var(--primary-color);
-  color: var(--white);
-  border: none;
-  border-radius: 0.5rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.submit-btn-enviarEnviar:hover {
-  background-color: var(--hover-primary);
-}
-
-.submit-btn-enviarEnviar:disabled {
-  background-color: gray;
-  cursor: not-allowed;
 }
 
 .weather-info {
@@ -569,175 +492,55 @@ section ul li {
   margin: 0 auto;
 }
 
-.weather-info .grid .info-card:nth-last-child(-n + 2) {
-  grid-column: span 1;
-}
-
 .weather-info .info-card {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 1.5rem;
   border-radius: 0.75rem;
   background: var(--primary-light);
-  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.weather-info .info-card:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-}
-
-.weather-info .info-card .label-group {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.weather-info .info-card .label {
-  color: var(--text-dark);
-  font-weight: 500;
-  font-size: 1.1rem;
-}
-
-.weather-info .info-card .value {
-  font-weight: 600;
-  color: var(--primary-color);
-  font-size: 1.1rem;
-}
-
-/* Card Background Colors */
-.weather-info .info-card.river {
-  background-color: var(--primary-light);
-}
-
-.weather-info .info-card.rain {
-  background-color: #f3e8ff;
-}
-
-.weather-info .info-card.water {
-  background-color: #ecfeff;
-}
-
-.weather-info .info-card.risk {
-  background-color: #fff7ed;
-}
-
-.weather-info .info-card.weather {
-  background-color: #fefce8;
-}
-
-/* Icon Colors */
 .weather-info .icon-blue {
   color: var(--primary-color);
 }
 
 .weather-info .icon-purple {
-  color: #9333ea;
+  color: var(--icon-purple);
 }
 
 .weather-info .icon-cyan {
-  color: #06b6d4;
+  color: var(--icon-cyan);
 }
 
 .weather-info .icon-orange {
-  color: #f97316;
+  color: var(--icon-orange);
 }
 
 .weather-info .icon-yellow {
-  color: #ca8a04;
+  color: var(--icon-yellow);
 }
 
-/* Risk Level Colors */
 .weather-info .risk-low {
-  color: #10b981;
+  color: var(--risk-low);
 }
 
 .weather-info .risk-medium {
-  color: #f59e0b;
+  color: var(--risk-medium);
 }
 
 .weather-info .risk-high {
-  color: #ef4444;
+  color: var(--risk-high);
 }
 
-.hidden {
-  display: none;
-}
-
-#riscos {
-  padding: 40px;
-  background-color: var(--gray-light);
-  border-radius: 1rem;
-  margin: 20px 0;
-}
-
-#riscos h2 {
-  color: var(--text-dark);
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-#riscos h3 {
-  font-size: 2rem;
-  margin-top: 40px;
-}
-
-#riscos ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-#riscos li {
-  margin: 15px 0;
-  padding: 10px;
-  background-color: var(--white);
-  border-radius: 8px;
-  box-shadow: var(--shadow-sm);
-}
-
-#riscos .icon {
-  width: 24px;
-  height: 24px;
-  vertical-align: middle;
-  margin-right: 8px;
-}
-
-.item {
-  cursor: pointer;
-  color: var(--primary-color);
-}
-
-.item:hover {
-  color: var(--hover-primary);
-}
-
-.info {
-  margin-top: 10px;
-  padding: 10px;
-  background-color: var(--form-bg);
-  border-radius: 8px;
-  box-shadow: var(--shadow-sm);
-}
-
-/* Estilo para o botão de chamada para ação */
 .btn-cta {
   background-color: var(--primary-color);
-  color: white;
+  color: var(--white);
   padding: 10px 20px;
-  text-decoration: none;
   border-radius: 5px;
-  font-weight: bold;
-  display: inline-block;
-}
-
-.btn-cta:hover {
-  background-color: var(--text-dark);
 }
 
 footer {
   background: var(--nav-bg);
-  backdrop-filter: blur(8px);
   padding: 0;
   text-align: center;
   border-top: 1px solid var(--primary-light);
@@ -745,40 +548,26 @@ footer {
   bottom: 0;
   width: 100%;
   height: 80px;
-  display: flex; /* Adicionado display flex */
-  align-items: center; /* Centraliza verticalmente */
-  justify-content: center; /* Centraliza horizontalmente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0.5rem 1rem; /* Adicionado padding interno */
+  padding: 0.5rem 1rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem; /* Espaço entre os elementos */
+  gap: 0.5rem;
 }
 
 .footer p {
   color: var(--text-dark);
-  margin: 0; /* Remove margin padrão */
-}
-
-.footer-links {
-  display: flex;
-  gap: 1rem; /* Espaço entre os links */
-  justify-content: center;
 }
 
 .footer-links a {
   color: var(--primary-color);
-  text-decoration: none;
-  transition: color 0.2s;
-  padding: 0.25rem 0.5rem;
-}
-
-.footer-links a:hover {
-  color: var(--hover-primary);
 }
 
 ::-webkit-scrollbar {
@@ -788,16 +577,10 @@ footer {
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--primary-color);
-  border-radius: 8px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--hover-primary);
-}
-
-* {
-  scrollbar-width: thin;
-  scrollbar-color: var(--primary-color) var(--gray-light);
 }
 
 @media (max-width: 767px) {
@@ -806,52 +589,8 @@ footer {
     align-items: flex-start;
   }
 
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
   .header h1 {
     font-size: 2rem;
-  }
-
-  .header p {
-    font-size: 1rem;
-  }
-  .weather-info {
-    padding: 1.5rem;
-  }
-
-  .weather-info h3 {
-    font-size: 1.25rem;
-  }
-
-  .weather-info .info-card {
-    padding: 0.75rem;
-  }
-  section h2 {
-    font-size: 1.5rem;
-  }
-
-  .form-group label {
-    font-size: 0.75rem;
-  }
-
-  .form-group input,
-  .form-group select {
-    font-size: 0.875rem;
-  }
-
-  .submit-btn {
-    width: 100%;
-  }
-
-  #riscos h2 {
-    font-size: 2rem;
-  }
-
-  #riscos h3 {
-    font-size: 1.5rem;
   }
 }
 
@@ -861,40 +600,7 @@ footer {
     justify-content: space-between;
   }
 
-  .nav-links {
-    flex-direction: row;
-  }
-
   .header h1 {
     font-size: 2.5rem;
-  }
-
-  .header p {
-    font-size: 1.125rem;
-  }
-
-  section h2 {
-    font-size: 2rem;
-  }
-
-  .form-group label {
-    font-size: 0.875rem;
-  }
-
-  .form-group input,
-  .form-group select {
-    font-size: 1rem;
-  }
-
-  .submit-btn {
-    width: auto;
-  }
-
-  #riscos h2 {
-    font-size: 2.5rem;
-  }
-
-  #riscos h3 {
-    font-size: 2rem;
   }
 }
