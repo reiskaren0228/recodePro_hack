@@ -165,6 +165,8 @@ Distribuído sob a licença MIT. Veja [MIT License](https://opensource.org/licen
 ## 🤝 Agradecimentos
 <br>
 🌊 Um grande obrigado a todos os participantes do Hackathon da Recode Pro AI e aos organizadores que tornaram este evento possível.
+
 <br>
+
 [Voltar ao topo](#topo)
 
